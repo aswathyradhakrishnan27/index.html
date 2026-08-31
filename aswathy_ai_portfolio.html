@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aswathy R — Generative AI Engineer</title>
+<meta name="description" content="Aswathy R — Generative AI Engineer with 4.5+ years of experience building LLM, RAG, multi-agent, MCP and cloud-based AI systems.">
+<style>
+:root{
+  --bg:#07080c;--panel:#0d1017;--panel2:#11151e;--text:#f5f7fb;--muted:#9aa4b2;
+  --line:rgba(255,255,255,.09);--accent:#8b7cff;--accent2:#54e1ff;--green:#77f0b2;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+canvas#network{position:fixed;inset:0;z-index:-3;opacity:.55}
+.grid{position:fixed;inset:0;z-index:-2;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(to bottom,black,transparent 75%);opacity:.18}
+.glow{position:fixed;width:520px;height:520px;border-radius:50%;filter:blur(100px);background:rgba(139,124,255,.12);z-index:-1;top:-180px;right:-140px}
+.container{width:min(1120px,92%);margin:auto}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:5}
+.logo{font-weight:800;letter-spacing:.12em;font-size:13px}
+.logo span{color:var(--accent2)}
+.navlinks{display:flex;gap:25px;color:var(--muted);font-size:13px}
+.navlinks a:hover{color:#fff}
+.hero{min-height:calc(100vh - 76px);display:grid;place-items:center;padding:70px 0 110px}
+.eyebrow{font:600 11px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.2em;color:var(--accent2);margin-bottom:20px}
+h1{font-size:clamp(54px,9vw,108px);line-height:.88;letter-spacing:-.065em;max-width:900px}
+h1 .dim{color:#788292}
+.hero p{margin-top:28px;color:#b6beca;max-width:680px;font-size:18px;line-height:1.65}
+.ctas{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+.btn{border:1px solid var(--line);padding:13px 18px;border-radius:999px;background:rgba(255,255,255,.04);font-size:13px;transition:.25s}
+.btn.primary{background:#fff;color:#08090d;border-color:#fff;font-weight:700}
+.btn:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.25)}
+.status{display:inline-flex;align-items:center;gap:9px;margin-top:36px;color:#aeb7c4;font-size:12px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 18px var(--green);animation:pulse 1.8s infinite}
+@keyframes pulse{50%{opacity:.35;transform:scale(.75)}}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:20px 0 130px}
+.metric{background:rgba(10,12,17,.8);padding:25px}
+.metric b{display:block;font-size:27px;letter-spacing:-.04em}
+.metric span{display:block;margin-top:7px;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}
+section{padding:80px 0}
+.sectiontag{font:600 11px ui-monospace,monospace;color:var(--accent2);letter-spacing:.18em;margin-bottom:15px}
+h2{font-size:clamp(34px,5vw,62px);letter-spacing:-.05em;line-height:1}
+.sectionintro{color:var(--muted);max-width:650px;line-height:1.7;margin-top:18px}
+.profile{display:grid;grid-template-columns:1fr 1.2fr;gap:50px;align-items:start}
+.profilecopy{font-size:18px;line-height:1.8;color:#c0c7d1}
+.profilecopy strong{color:#fff}
+.terminal{background:#0a0c11;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.3)}
+.termhead{padding:12px 15px;border-bottom:1px solid var(--line);display:flex;gap:7px}
+.termhead i{width:8px;height:8px;border-radius:50%;background:#4b5563}
+.termhead i:nth-child(2){background:#6b7280}.termhead i:nth-child(3){background:#9ca3af}
+pre{padding:24px;color:#b8c1cf;line-height:1.8;font-size:13px;overflow:auto}
+.c{color:var(--accent2)}.v{color:var(--green)}.k{color:#c4b5fd}
+.stack{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:38px}
+.skill{padding:18px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));border:1px solid var(--line);border-radius:14px;transition:.3s}
+.skill:hover{transform:translateY(-5px);border-color:rgba(139,124,255,.45)}
+.skill b{font-size:13px}.skill p{font-size:12px;color:var(--muted);margin-top:7px;line-height:1.5}
+.projects{display:grid;gap:18px;margin-top:42px}
+.project{position:relative;border:1px solid var(--line);border-radius:22px;padding:30px;background:linear-gradient(120deg,rgba(255,255,255,.045),rgba(255,255,255,.012));overflow:hidden}
+.project:before{content:"";position:absolute;width:280px;height:280px;border-radius:50%;background:rgba(139,124,255,.08);filter:blur(70px);right:-130px;top:-140px}
+.projecttop{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
+.projectnum{font:600 11px ui-monospace,monospace;color:var(--accent2);letter-spacing:.15em}
+.project h3{font-size:27px;margin-top:10px;letter-spacing:-.035em}
+.project .role{color:#aab3c0;font-size:12px;margin-top:7px}
+.project p{color:#b9c1cc;line-height:1.7;max-width:850px;margin-top:17px}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:20px}.tag{font:11px ui-monospace,monospace;padding:7px 9px;border:1px solid var(--line);border-radius:999px;color:#c9d0da;background:rgba(255,255,255,.025)}
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:25px}
+.node{font:600 10px ui-monospace,monospace;padding:10px 11px;border-radius:9px;background:#111722;border:1px solid rgba(84,225,255,.18)}
+.arrow{color:#667181;font-size:12px}
+.timeline{margin-top:45px;border-left:1px solid var(--line);margin-left:9px}
+.event{position:relative;padding:0 0 42px 34px}.event:before{content:"";position:absolute;left:-5px;top:3px;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 22px rgba(139,124,255,.8)}
+.event time{font:11px ui-monospace,monospace;color:var(--accent2)}
+.event h3{font-size:21px;margin:8px 0}.event p{color:var(--muted);line-height:1.6;max-width:700px}
+.next{border:1px solid var(--line);border-radius:25px;padding:45px;background:radial-gradient(circle at 85% 30%,rgba(84,225,255,.11),transparent 35%),radial-gradient(circle at 15% 80%,rgba(139,124,255,.12),transparent 35%),#0b0e14}
+.route{display:flex;align-items:center;gap:20px;margin:32px 0}.place{font-weight:800;font-size:22px}.routebar{height:1px;background:linear-gradient(90deg,var(--accent),var(--accent2));flex:1;position:relative}.routebar:after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:var(--accent2);right:0;top:-3px;box-shadow:0 0 16px var(--accent2)}
+.next p{color:#b9c1cc;line-height:1.75;max-width:720px}
+footer{padding:70px 0 40px;border-top:1px solid var(--line);margin-top:50px}
+.footergrid{display:flex;justify-content:space-between;gap:30px;align-items:end}
+.bigemail{font-size:clamp(22px,4vw,45px);font-weight:700;letter-spacing:-.04em}
+.small{color:var(--muted);font-size:12px;line-height:1.7}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:800px){
+ .navlinks{display:none}.hero{padding-top:50px}
+ .metrics{grid-template-columns:repeat(2,1fr)}
+ .profile{grid-template-columns:1fr}.stack{grid-template-columns:1fr 1fr}
+ .projecttop{display:block}.route{gap:12px}.place{font-size:18px}
+}
+@media(max-width:480px){.stack{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}.metric{padding:18px}h1{font-size:54px}.hero p{font-size:16px}}
+</style>
+</head>
+<body>
+<canvas id="network"></canvas><div class="grid"></div><div class="glow"></div>
+
+<div class="container">
+<nav>
+  <div class="logo">ASWATHY R</div>
+  <div class="navlinks">
+    <a href="#work">Work</a><a href="#stack">Stack</a><a href="#journey">Journey</a><a href="#next">Amsterdam</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="eyebrow">GENERATIVE AI ENGINEER // 4.5+ YEARS</div>
+    <h1>Building AI<br><span class="dim">that can act.</span></h1>
+    <p>I engineer LLM-powered systems across <b>RAG, multi-agent workflows, LangGraph, MCP, voice AI and cloud platforms</b> — turning natural language into reliable, real-world actions.</p>
+    <div class="ctas">
+      <a class="btn primary" href="#work">Explore my systems ↓</a>
+      <a class="btn" href="mailto:aswathykrishna.2799@gmail.com">Start a conversation ↗</a>
+    </div>
+    <div class="status"><span class="dot"></span> Open to Generative AI opportunities in Amsterdam</div>
+  </div>
+</header>
+
+<div class="metrics reveal">
+  <div class="metric"><b>4.5+</b><span>Years experience</span></div>
+  <div class="metric"><b>LLM</b><span>Core focus</span></div>
+  <div class="metric"><b>35%</b><span>RAG accuracy improvement</span></div>
+  <div class="metric"><b>20%</b><span>Downtime reduction</span></div>
+</div>
+
+<section class="reveal" id="about">
+  <div class="profile">
+    <div>
+      <div class="sectiontag">01 // AI IDENTITY</div>
+      <h2>Engineer first.<br>AI obsessed.</h2>
+    </div>
+    <div class="profilecopy">
+      <p>I’m <strong>Aswathy R</strong>, a Generative AI Engineer at Infosys Limited with 4.5+ years of professional experience.</p>
+      <p style="margin-top:18px">My work sits at the intersection of <strong>software engineering and Generative AI</strong>: building scalable APIs, connecting LLMs to enterprise data and tools, orchestrating agents, and designing privacy-aware conversational experiences.</p>
+      <p style="margin-top:18px">I enjoy taking an AI idea from a requirement to an engineered system — architecture, orchestration, integration, cloud deployment and automation included.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reveal" id="stack">
+  <div class="sectiontag">02 // TECHNICAL ARSENAL</div>
+  <h2>The tools behind<br>the intelligence.</h2>
+  <p class="sectionintro">A practical stack for building enterprise-grade Generative AI systems.</p>
+  <div class="stack">
+    <div class="skill"><b>Python</b><p>Core engineering language; NumPy, Pandas, Boto3.</p></div>
+    <div class="skill"><b>LLMs & Prompt Engineering</b><p>LLM-powered applications and response optimization.</p></div>
+    <div class="skill"><b>LangChain</b><p>LLM application pipelines and orchestration.</p></div>
+    <div class="skill"><b>LangGraph</b><p>Stateful and multi-agent workflow orchestration.</p></div>
+    <div class="skill"><b>RAG</b><p>Enterprise knowledge retrieval and grounded responses.</p></div>
+    <div class="skill"><b>MCP + Playwright</b><p>Agentic browser automation and tool interaction.</p></div>
+    <div class="skill"><b>FastAPI</b><p>API-first backend services for AI applications.</p></div>
+    <div class="skill"><b>AWS + Azure</b><p>Cloud services including S3, Comprehend, Transcribe and Guardrails.</p></div>
+    <div class="skill"><b>LangFuse</b><p>Tracing and privacy-aware conversational pipelines.</p></div>
+  </div>
+</section>
+
+<section class="reveal" id="work">
+  <div class="sectiontag">03 // SELECTED SYSTEMS</div>
+  <h2>Not just projects.<br>AI systems.</h2>
+  <p class="sectionintro">Selected work from my Generative AI engineering experience at Infosys.</p>
+  <div class="projects">
+
+    <article class="project">
+      <div class="projecttop">
+        <div><div class="projectnum">SYSTEM 01</div><h3>Agentic AI Test Automation Platform</h3><div class="role">Generative AI Engineer</div></div>
+      </div>
+      <p>Developed an enterprise Agentic AI platform that converts ADO stories and business requirement documents into AI-generated acceptance criteria, test cases and automation scripts using multi-agent workflows. Integrated with Azure DevOps to reduce manual test design effort and improve testing consistency.</p>
+      <div class="flow"><span class="node">ADO / Requirements</span><span class="arrow">→</span><span class="node">Multi-Agent Workflow</span><span class="arrow">→</span><span class="node">Acceptance Criteria</span><span class="arrow">→</span><span class="node">Test Cases</span><span class="arrow">→</span><span class="node">Automation Scripts</span></div>
+      <div class="tags"><span class="tag">LLMs</span><span class="tag">Multi-Agent</span><span class="tag">LangGraph</span><span class="tag">Azure DevOps</span><span class="tag">Python</span></div>
+    </article>
+
+    <article class="project">
+      <div class="projecttop">
+        <div><div class="projectnum">SYSTEM 02</div><h3>Agentic Browser Automation Framework</h3><div class="role">Automation Developer</div></div>
+      </div>
+      <p>Built an AI-powered browser automation framework using Playwright + MCP. Enabled agentic execution where LLM-generated instructions were dynamically translated into Playwright test scripts, with a natural-language → test-case → execution pipeline and dynamic locator mapping and validation.</p>
+      <div class="flow"><span class="node">Natural Language</span><span class="arrow">→</span><span class="node">LLM</span><span class="arrow">→</span><span class="node">MCP</span><span class="arrow">→</span><span class="node">Playwright</span><span class="arrow">→</span><span class="node">Browser Action</span></div>
+      <div class="tags"><span class="tag">Playwright MCP</span><span class="tag">LLMs</span><span class="tag">Agentic AI</span><span class="tag">Automation</span></div>
+    </article>
+
+    <article class="project">
+      <div class="projecttop">
+        <div><div class="projectnum">SYSTEM 03</div><h3>Customer Assist Voice Chatbot</h3><div class="role">Generative AI Engineer</div></div>
+      </div>
+      <p>Developed an intelligent customer assistance chatbot for real-time voice and text interactions. Designed a multi-agent architecture for query routing, integrated Novasonic speech models for speech-to-text, and implemented a PII/PHI masking pipeline using LangFuse traces to preserve privacy while maintaining conversational context.</p>
+      <div class="flow"><span class="node">Voice</span><span class="arrow">→</span><span class="node">Speech-to-Text</span><span class="arrow">→</span><span class="node">Privacy Masking</span><span class="arrow">→</span><span class="node">Multi-Agent</span><span class="arrow">→</span><span class="node">LLM</span><span class="arrow">→</span><span class="node">Voice</span></div>
+      <div class="tags"><span class="tag">Voice AI</span><span class="tag">Multi-Agent</span><span class="tag">Novasonic</span><span class="tag">LangFuse</span><span class="tag">PII/PHI</span></div>
+    </article>
+
+    <article class="project">
+      <div class="projecttop">
+        <div><div class="projectnum">SYSTEM 04</div><h3>Enterprise Knowledge Retrieval</h3><div class="role">Generative AI Engineer</div></div>
+      </div>
+      <p>Designed and deployed LLM-based solutions for enterprise knowledge retrieval, improving query accuracy by 35%. Built prompt engineering pipelines to optimize chatbot responses across multiple domains and collaborated on cloud integration across AWS and Azure.</p>
+      <div class="flow"><span class="node">User Query</span><span class="arrow">→</span><span class="node">Retrieval</span><span class="arrow">→</span><span class="node">Context</span><span class="arrow">→</span><span class="node">LLM</span><span class="arrow">→</span><span class="node">Grounded Answer</span></div>
+      <div class="tags"><span class="tag">RAG</span><span class="tag">LLMs</span><span class="tag">Prompt Engineering</span><span class="tag">AWS</span><span class="tag">Azure</span></div>
+    </article>
+  </div>
+</section>
+
+<section class="reveal" id="journey">
+  <div class="sectiontag">04 // CAREER EVOLUTION</div>
+  <h2>From engineering<br>to agentic AI.</h2>
+  <div class="timeline">
+    <div class="event"><time>2021</time><h3>BE / BTech — Electrical & Electronics Engineering</h3><p>Anna University, Tamil Nadu.</p></div>
+    <div class="event"><time>APR 2022 → PRESENT</time><h3>Infosys Limited</h3><p>4.5+ years of professional engineering experience, evolving into Generative AI engineering across LLM applications, enterprise retrieval, agentic automation, voice AI and cloud platforms.</p></div>
+    <div class="event"><time>NOW</time><h3>Building the next generation of AI systems</h3><p>Focused on multi-agent workflows, LangGraph, MCP, LLM applications, privacy-aware conversational AI and production-oriented engineering.</p></div>
+  </div>
+</section>
+
+<section class="reveal" id="next">
+  <div class="next">
+    <div class="sectiontag">05 // NEXT DEPLOYMENT</div>
+    <h2>India → Amsterdam</h2>
+    <div class="route"><span class="place">INDIA 🇮🇳</span><span class="routebar"></span><span class="place">AMSTERDAM 🇳🇱</span></div>
+    <p>After building my professional foundation in India, I’m ready for an international engineering environment where I can collaborate with diverse teams, learn from different engineering cultures, and contribute to ambitious AI products at scale. Amsterdam is the next chapter I want to explore — bringing my hands-on Generative AI experience while continuing to grow at the intersection of AI and software engineering.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footergrid">
+    <div><div class="sectiontag">LET'S BUILD</div><div class="bigemail"><a href="mailto:aswathykrishna.2799@gmail.com">aswathykrishna.2799@gmail.com ↗</a></div></div>
+    <div class="small">Aswathy R · Generative AI Engineer<br>Infosys Limited · 4.5+ years<br><br><a href="https://github.com/aswathyradhakrishnan27/ML" target="_blank">GitHub ↗</a></div>
+  </div>
+</footer>
+</div>
+
+<script>
+const canvas=document.getElementById('network'),ctx=canvas.getContext('2d');
+let w,h,pts=[];
+function resize(){w=canvas.width=innerWidth*devicePixelRatio;h=canvas.height=innerHeight*devicePixelRatio;canvas.style.width=innerWidth+'px';canvas.style.height=innerHeight+'px';pts=[];for(let i=0;i<65;i++)pts.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.18*devicePixelRatio,vy:(Math.random()-.5)*.18*devicePixelRatio});}
+resize();addEventListener('resize',resize);
+function draw(){ctx.clearRect(0,0,w,h);for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;ctx.fillStyle='rgba(139,124,255,.5)';ctx.beginPath();ctx.arc(p.x,p.y,1.4*devicePixelRatio,0,Math.PI*2);ctx.fill();}
+for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){let a=pts[i],b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<145*devicePixelRatio){ctx.strokeStyle=`rgba(84,225,255,${(1-d/(145*devicePixelRatio))*.12})`;ctx.lineWidth=devicePixelRatio;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}
+requestAnimationFrame(draw)}draw();
+
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
+</script>
+</body>
+</html>
