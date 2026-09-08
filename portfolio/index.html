@@ -203,3 +203,4 @@ function resize(){w=c.width=innerWidth;h=c.height=innerHeight;pts=Array.from({le
 function draw(){x.clearRect(0,0,w,h);for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;x.beginPath();x.arc(p.x,p.y,1.3,0,Math.PI*2);x.fillStyle='rgba(101,216,255,.45)';x.fill()}for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){let dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.hypot(dx,dy);if(d<130){x.beginPath();x.moveTo(pts[i].x,pts[i].y);x.lineTo(pts[j].x,pts[j].y);x.strokeStyle='rgba(101,216,255,'+(.11*(1-d/130))+')';x.stroke()}}requestAnimationFrame(draw)}
 addEventListener('resize',resize);resize();draw();const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
 </script></body></html>
+
