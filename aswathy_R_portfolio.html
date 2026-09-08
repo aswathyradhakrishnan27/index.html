@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aswathy R | Generative AI Engineer</title>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Tn6vE21G2-ljyiTIUzzN_7nnJ6NQdAycGcKS2E9Eorz26jVg-8RiuL4HsxDihoJEYwduHxuqiMnVSPuUlTCinUb8kD_ZPQEia2Lf9kzK95LV32mrq6eKgeazINGuJgM1UCfI_pncH3kD1jUzjUYTJVbxbXPcPH6ZEM6AAYROSG6q8BIcgWoVpw_ugD5ulOyOYQxnEqs0UHMX9SG_vlwZnildlAoxW-htv9xyLqpX5CE6pp8wBl1C-0OeevHhMHv6VSM9Sb3B0jD6mTPi5a7RagPRbKooWI8j_kcQSeRhPbCKz68Fj4pt4TninmR5-1sIcCt02TkYP87qePqvfAKZfw" charset="UTF-8"></script><style>
+:root{--bg:#070b14;--panel:#0d1422;--text:#eef4ff;--muted:#9eabc0;--line:rgba(255,255,255,.1);--a:#65d8ff;--b:#9b7bff;--g:#7cf2bd}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;overflow-x:hidden}
+canvas{position:fixed;inset:0;z-index:-3;opacity:.35}.grid{position:fixed;inset:0;z-index:-2;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:55px 55px}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}.nav{position:sticky;top:0;z-index:20;background:rgba(7,11,20,.75);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.navin{height:68px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;letter-spacing:2px}.logo span{color:var(--a)}.links{display:flex;gap:22px;font-size:13px;color:var(--muted)}.links a:hover{color:var(--text)}
+.hero{min-height:88vh;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center;padding:75px 0}.eyebrow{font-size:12px;letter-spacing:3px;color:var(--a);font-weight:800}.hero h1{font-size:clamp(48px,8vw,92px);line-height:.92;margin:15px 0}.hero h1 span{display:block;color:transparent;-webkit-text-stroke:1px rgba(238,244,255,.45)}.hero h2{font-size:clamp(20px,3vw,31px);margin:24px 0 14px}.hero p{color:var(--muted);font-size:17px;line-height:1.8;max-width:650px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{padding:13px 18px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.04);font-weight:700;font-size:14px}.btn.primary{background:linear-gradient(135deg,var(--a),var(--b));color:#07101a;border:0}
+.visual{height:420px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,rgba(101,216,255,.08),rgba(155,123,255,.08));position:relative;overflow:hidden}.orb{position:absolute;width:210px;height:210px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,rgba(101,216,255,.7) 9%,rgba(101,216,255,.16) 42%,transparent 70%);left:50%;top:35%;transform:translate(-50%,-50%);animation:pulse 3s ease-in-out infinite}.node{position:absolute;padding:9px 12px;border:1px solid rgba(101,216,255,.3);background:rgba(7,11,20,.75);border-radius:10px;font-size:11px;color:#cfeaff;animation:float 4s ease-in-out infinite}.n1{left:10%;top:18%}.n2{right:8%;top:24%;animation-delay:.7s}.n3{left:13%;bottom:20%;animation-delay:1.2s}.n4{right:10%;bottom:16%;animation-delay:1.8s}.core{position:absolute;left:50%;top:58%;transform:translate(-50%,-50%);font-size:12px;letter-spacing:2px;color:var(--g);font-weight:900}
+section{padding:90px 0}.sectionhead{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:35px}.sectionhead h2{font-size:38px;margin:0}.sectionhead p{color:var(--muted);max-width:530px;line-height:1.7;margin:0}.about{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card{background:rgba(13,20,34,.72);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 15px 60px rgba(0,0,0,.18)}.card h3{margin-top:0}.card p,.card li{color:var(--muted);line-height:1.75}.chips{display:flex;flex-wrap:wrap;gap:9px}.chip{font-size:12px;padding:8px 11px;border:1px solid var(--line);border-radius:999px;color:#cbd7ea;background:rgba(255,255,255,.035)}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.metric{padding:25px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.035)}.metric b{font-size:35px}.metric span{display:block;color:var(--muted);font-size:12px;margin-top:7px}
+.projects{display:grid;gap:20px}.project{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}.project:nth-child(even){direction:rtl}.project:nth-child(even)>*{direction:ltr}.tag{color:var(--a);font-size:11px;font-weight:900;letter-spacing:2px}.project h3{font-size:28px;margin:10px 0}.project p{color:var(--muted);line-height:1.75}.architecture{min-height:260px;border-radius:20px;border:1px solid var(--line);background:rgba(7,11,20,.65);display:flex;align-items:center;justify-content:center;padding:25px}.orchestrator{width:100%;padding:8px}.orchestrator .box{min-width:92px}.orch-title{text-align:center;font-size:11px;letter-spacing:2px;color:var(--g);font-weight:900;margin-bottom:18px}.orchestrator .flow{margin:9px 0}.orchestrator .box{min-width:88px}.orchestrator .box small{display:block;color:var(--muted);font-size:9px;margin-top:4px}.gate{padding:11px 12px;border:1px dashed rgba(155,123,255,.55);border-radius:10px;background:rgba(155,123,255,.08);font-size:10px;text-align:center;color:#e0d7ff;min-width:82px}.connector{text-align:center;color:var(--a);font-size:18px;margin:1px 0}.merge{color:var(--a);font-weight:900}.orchestration-note{text-align:center;color:var(--muted);font-size:9px;line-height:1.5;margin-top:14px;padding-top:10px;border-top:1px solid var(--line)}.flow{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap}.box{padding:12px 14px;border:1px solid rgba(101,216,255,.25);border-radius:10px;background:rgba(101,216,255,.06);font-size:11px;text-align:center}.arrow{color:var(--a);font-weight:900}
+.timeline{position:relative;margin-left:10px;border-left:1px solid rgba(101,216,255,.3);padding-left:28px}.event{position:relative;margin:0 0 28px}.event:before{content:"";position:absolute;left:-35px;top:5px;width:11px;height:11px;border-radius:50%;background:var(--a);box-shadow:0 0 18px var(--a)}.event b{color:var(--a)}.event h3{margin:7px 0}.event p{color:var(--muted);line-height:1.7;margin:0}
+.think{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.step{padding:20px 12px;border:1px solid var(--line);border-radius:16px;text-align:center;background:rgba(255,255,255,.03)}.step b{display:block;font-size:12px}.step span{font-size:11px;color:var(--muted);display:block;margin-top:7px}
+.contact{border:1px solid var(--line);border-radius:26px;padding:50px;background:linear-gradient(135deg,rgba(101,216,255,.08),rgba(155,123,255,.08));text-align:center}.contact h2{font-size:42px;margin:0 0 12px}.contact p{color:var(--muted);line-height:1.7}.contact a{color:var(--a)}footer{padding:40px 0;color:#68758a;font-size:12px;text-align:center}
+.reveal{opacity:0;transform:translateY(24px);transition:.8s ease}.reveal.show{opacity:1;transform:none}@keyframes pulse{50%{transform:translate(-50%,-50%) scale(1.1)}}@keyframes float{50%{transform:translateY(-9px)}}
+@media(max-width:800px){.links{display:none}.hero,.about,.project{grid-template-columns:1fr}.hero{padding:55px 0}.visual{height:330px}.metrics{grid-template-columns:1fr 1fr}.think{grid-template-columns:1fr 1fr}.project:nth-child(even){direction:ltr}.sectionhead{display:block}.sectionhead p{margin-top:12px}.contact h2{font-size:32px}}
+
+.task-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:28px 0}
+.task-card{border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.035);border-radius:18px;padding:24px}
+.task-label{font-size:.68rem;letter-spacing:.18em;opacity:.62;margin-bottom:9px}
+.task-card h4{font-size:1.18rem;margin:0 0 12px}
+.task-card p{line-height:1.7;opacity:.78}
+.agent-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.agent-pills span{font-size:.7rem;padding:7px 10px;border:1px solid rgba(255,255,255,.12);border-radius:999px;opacity:.82}
+.arch-branches{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px}
+.arch-branch{display:flex;flex-direction:column;gap:8px;padding:18px;border:1px solid rgba(255,255,255,.09);border-radius:14px;background:rgba(255,255,255,.025)}
+.arch-branch strong{font-size:.72rem;letter-spacing:.12em;margin-bottom:4px}
+.arch-branch span{font-size:.78rem;opacity:.72}
+@media(max-width:760px){.task-grid,.arch-branches{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<canvas id="net"></canvas><div class="grid"></div>
+<nav class="nav"><div class="wrap navin"><div class="logo">ASWATHY <span>R</span></div><div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a></div></div></nav>
+<main>
+<section class="hero wrap"><div class="reveal"><div class="eyebrow">GENERATIVE AI ENGINEER · ENTERPRISE AI</div><h1>ASWATHY <span>R</span></h1><h2>Building intelligent systems that understand, reason, retrieve and act.</h2><p>Generative AI Engineer with <b>4.5+ years</b> of experience building LLM-powered enterprise solutions, agentic workflows, conversational AI and automation platforms.</p><div class="buttons"><a class="btn primary" href="#projects">Explore My Work</a><a class="btn" href="https://github.com/aswathyradhakrishnan27/ML" target="_blank">GitHub ↗</a></div></div><div class="visual reveal"><div class="orb"></div><div class="core">AI SYSTEM CORE</div><div class="node n1">LLM</div><div class="node n2">RAG</div><div class="node n3">AGENTS</div><div class="node n4">MCP</div></div></section>
+
+<section id="about"><div class="wrap"><div class="sectionhead reveal"><h2>AI Engineer, by craft.</h2><p>I design and build practical AI systems that connect models, data, tools and business workflows into usable enterprise products.</p></div><div class="about"><div class="card reveal"><h3>About Me</h3><p>I work as a Generative AI Engineer at Infosys, developing LLM-based applications across agentic automation, browser automation, conversational AI and enterprise knowledge retrieval.</p><p>My work spans prompt engineering, multi-agent orchestration, privacy-aware conversational pipelines, APIs and cloud services—turning AI capabilities into reliable engineering systems.</p></div><div class="card reveal"><h3>What I Build</h3><ul><li>LLM-powered enterprise applications</li><li>RAG and knowledge retrieval solutions</li><li>Multi-agent & agentic workflows</li><li>AI-powered test automation</li><li>Voice & text conversational systems</li><li>Privacy-aware AI pipelines</li></ul></div></div></div></section>
+
+<section id="skills"><div class="wrap"><div class="sectionhead reveal"><h2>Technical Arsenal</h2><p>A practical stack for taking GenAI ideas from prompt and prototype to integrated enterprise systems.</p></div><div class="card reveal"><div class="chips"><span class="chip">Python</span><span class="chip">LLMs</span><span class="chip">RAG</span><span class="chip">Prompt Engineering</span><span class="chip">LangChain</span><span class="chip">LangGraph</span><span class="chip">LangFuse</span><span class="chip">Playwright MCP</span><span class="chip">FastAPI</span><span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">Amazon S3</span><span class="chip">AWS Comprehend</span><span class="chip">AWS Transcribe</span><span class="chip">Guardrails</span><span class="chip">Boto3</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Git</span><span class="chip">REST APIs</span><span class="chip">Multi-Agent Systems</span><span class="chip">Voice AI</span></div></div></div></section>
+
+<section id="projects"><div class="wrap"><div class="sectionhead reveal"><h2>Featured Projects</h2><p>Selected systems from my Generative AI engineering work.</p></div><div class="projects">
+<div class="project card reveal"><div><div class="tag">01 · AGENTIC AI</div><h3>Agentic AI Test Automation Platform</h3><p>Built an enterprise platform that converts ADO stories and business requirement documents into AI-generated acceptance criteria, test cases and automation scripts using multi-agent workflows.</p><p><b>Impact:</b> Reduced manual test design effort and improved testing consistency through AI-assisted generation.</p></div><div class="architecture">
+<div class="orchestrator">
+  <div class="orch-title">AI ORCHESTRATION LAYER</div>
+  <div class="flow">
+    <div class="box">ADO Board</div><div class="arrow">→</div>
+    <div class="box">Agent 1<br><small>Fetch Requirements</small></div><div class="arrow">→</div>
+    <div class="gate">BA<br>Gate Approval</div><div class="arrow">→</div>
+    <div class="box">Agent 2<br><small>Test Case Generation</small></div>
+  </div>
+  <div class="connector">↕</div>
+  <div class="flow">
+    <div class="box">Agent 4<br><small>Knowledge Base Context</small></div>
+    <div class="merge">⟷</div>
+    <div class="box">Agent 2<br><small>Context-Aware Generation</small></div>
+  </div>
+  <div class="flow">
+    <div class="arrow">↓</div><div class="gate">Test<br>Gate Approval</div><div class="arrow">↓</div>
+    <div class="box">Agent 3<br><small>Script Generation</small></div><div class="arrow">→</div>
+    <div class="gate">Engineer<br>Gate Approval</div>
+  </div>
+  <div class="orchestration-note">All agents, gates and knowledge services are coordinated through the orchestration layer.</div>
+</div>
+</div></div>
+<div class="project card reveal"><div><div class="tag">02 · MCP + BROWSER AI</div><h3>Agentic Browser Automation Framework</h3><p>Built AI-powered browser automation using Playwright and MCP, enabling agentic execution where LLM-generated instructions are dynamically translated into Playwright test scripts.</p><p><b>Pipeline:</b> Natural language → test case → dynamic locator mapping → execution → validation.</p></div><div class="architecture"><div class="flow"><div class="box">Natural Language</div><div class="arrow">→</div><div class="box">LLM</div><div class="arrow">→</div><div class="box">MCP</div><div class="arrow">→</div><div class="box">Playwright</div><div class="arrow">→</div><div class="box">Validate</div></div></div></div>
+<div class="project card reveal">
+  <div>
+    <div class="tag">03 · CUSTOMER ASSIST</div>
+    <h3>Customer Assist</h3>
+    <p>Built Customer Assist as a single enterprise AI project with two connected workstreams: a real-time Voice Bot and an Intelligent FAQ Chatbot.</p>
+
+    <div class="task">
+      <div class="task-label">TASK 01 · CUSTOMER ASSIST VOICE BOT</div>
+      <p>Developed real-time voice and text interaction, initially supporting FAQs for three brands and later migrating to the OneAI platform. Implemented multi-agent routing, Novasonic speech-to-text models, and a PII/PHI masking pipeline using LangFuse traces before converting masked responses back to audio.</p>
+    </div>
+
+    <div class="task">
+      <div class="task-label">TASK 02 · CUSTOMER ASSIST INTELLIGENT FAQ CHATBOT</div>
+      <p>Designed an FAQ-focused multi-agent assistant with a <b>Master Orchestrator</b> coordinating <b>Chitchat</b>, <b>RAG</b>, and <b>Escalation</b> agents, along with domain agents for <b>Admin</b>, <b>Troubleshooting</b>, and <b>Billing</b>. <b>Live tracing with LangFuse</b> provides visibility into agent execution and conversational flow.</p>
+    </div>
+  </div>
+
+  <div class="architecture">
+    <div class="orchestrator">
+      <div class="orch-title">CUSTOMER ASSIST · MULTI-AGENT ARCHITECTURE</div>
+      <div class="flow">
+        <div class="box">Voice / Text</div>
+        <div class="arrow">→</div>
+        <div class="box">Master<br>Orchestrator</div>
+        <div class="arrow">→</div>
+        <div class="box">Specialized<br>Agents</div>
+      </div>
+      <div class="connector">↓</div>
+      <div class="flow">
+        <div class="box">Chitchat<br>Agent</div>
+        <div class="box">RAG<br>Agent</div>
+        <div class="box">Escalation<br>Agent</div>
+      </div>
+      <div class="connector">↓</div>
+      <div class="flow">
+        <div class="box">Admin<br>Domain Agent</div>
+        <div class="box">Troubleshooting<br>Domain Agent</div>
+        <div class="box">Billing<br>Domain Agent</div>
+      </div>
+      <div class="orch-title" style="margin-top:16px;color:var(--a)">LIVE TRACING · LANGFUSE</div>
+    </div>
+  </div>
+</div>
+
+<div class="project card reveal">
+  <div>
+    <div class="tag">04 · KNOWLEDGE AI</div>
+    <h3>Enterprise Knowledge Retrieval Platform</h3>
+    <p>Designed an enterprise knowledge retrieval solution using LLM-based retrieval and prompt engineering to improve answer accuracy and provide reliable access to domain-specific organizational knowledge.</p>
+    <p><b>Reported impact:</b> Query accuracy improved by <b>35%</b>, with automated model monitoring and retraining workflows contributing to a <b>20%</b> reduction in downtime.</p>
+  </div>
+  <div class="architecture">
+    <div class="flow">
+      <div class="box">User Query</div><div class="arrow">→</div>
+      <div class="box">Query Understanding</div><div class="arrow">→</div>
+      <div class="box">Knowledge Retrieval</div><div class="arrow">→</div>
+      <div class="box">LLM</div><div class="arrow">→</div>
+      <div class="box">Grounded Response</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section><div class="wrap"><div class="sectionhead reveal"><h2>How I Think</h2><p>My approach is engineering-first: understand the problem, design the right AI workflow, evaluate it, then integrate and deploy.</p></div><div class="think reveal"><div class="step"><b>01</b><span>Problem</span></div><div class="step"><b>02</b><span>Understand</span></div><div class="step"><b>03</b><span>Design</span></div><div class="step"><b>04</b><span>Orchestrate</span></div><div class="step"><b>05</b><span>Evaluate</span></div><div class="step"><b>06</b><span>Deploy</span></div></div></div></section>
+
+<section id="journey"><div class="wrap"><div class="sectionhead reveal"><h2>Career Journey</h2><p>From an Electrical & Electronics Engineering foundation to building production-oriented Generative AI systems.</p></div><div class="timeline reveal"><div class="event"><b>2021</b><h3>BE / BTech · Electrical & Electronics Engineering</h3><p>Anna University, Tamil Nadu.</p></div><div class="event"><b>2022 → Present</b><h3>Infosys · Generative AI Engineer</h3><p>Enterprise AI engineering across LLM applications, retrieval, agentic workflows, automation and conversational systems.</p></div><div class="event"><b>Today</b><h3>Building AI systems that can act</h3><p>Working across LLMs, LangChain, LangGraph, LangFuse, MCP, voice AI, APIs and cloud services.</p></div></div></div></section>
+
+<section><div class="wrap"><div class="metrics reveal"><div class="metric"><b>4.5+</b><span>Years of experience</span></div><div class="metric"><b>LLM</b><span>Enterprise AI systems</span></div><div class="metric"><b>35%</b><span>Reported query accuracy improvement</span></div><div class="metric"><b>20%</b><span>Reported downtime reduction</span></div></div></div></section>
+
+<section id="contact"><div class="wrap"><div class="contact reveal"><h2>Let's build something intelligent.</h2><p>Interested in Generative AI, agentic systems, conversational AI or AI automation? I'd be happy to connect.</p><p><a href="mailto:aswathykrishna.2799@gmail.com">aswathykrishna.2799@gmail.com</a>
+<div class="contact-item">📞 <span>+91 8590619825</span></div></p><div class="buttons" style="justify-content:center"><a class="btn primary" href="mailto:aswathykrishna.2799@gmail.com">Contact Me</a><a class="btn" href="https://github.com/aswathyradhakrishnan27/ML" target="_blank">View GitHub ↗</a></div></div></div></section>
+</main><footer>© 2026 Aswathy R · Generative AI Engineer</footer>
+<script>
+const c=document.getElementById('net'),x=c.getContext('2d');let w,h,pts=[];
+function resize(){w=c.width=innerWidth;h=c.height=innerHeight;pts=Array.from({length:70},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25}))}
+function draw(){x.clearRect(0,0,w,h);for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;x.beginPath();x.arc(p.x,p.y,1.3,0,Math.PI*2);x.fillStyle='rgba(101,216,255,.45)';x.fill()}for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){let dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.hypot(dx,dy);if(d<130){x.beginPath();x.moveTo(pts[i].x,pts[i].y);x.lineTo(pts[j].x,pts[j].y);x.strokeStyle='rgba(101,216,255,'+(.11*(1-d/130))+')';x.stroke()}}requestAnimationFrame(draw)}
+addEventListener('resize',resize);resize();draw();const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+</script></body></html<!-- PROJECTS -->
+<section class="section" id="projects">
+  
+
+  </div></section>
+
+<section id="skills"><div class="wrap"><div class="sectionhead reveal"><h2>Technical Arsenal</h2><p>A practical stack for taking GenAI ideas from prompt and prototype to integrated enterprise systems.</p></div><div class="card reveal"><div class="chips"><span class="chip">Python</span><span class="chip">LLMs</span><span class="chip">RAG</span><span class="chip">Prompt Engineering</span><span class="chip">LangChain</span><span class="chip">LangGraph</span><span class="chip">LangFuse</span><span class="chip">Playwright MCP</span><span class="chip">FastAPI</span><span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">Amazon S3</span><span class="chip">AWS Comprehend</span><span class="chip">AWS Transcribe</span><span class="chip">Guardrails</span><span class="chip">Boto3</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Git</span><span class="chip">REST APIs</span><span class="chip">Multi-Agent Systems</span><span class="chip">Voice AI</span></div></div></div></section>
+
+<section id="projects"><div class="wrap"><div class="sectionhead reveal"><h2>Featured Projects</h2><p>Selected systems from my Generative AI engineering work.</p></div><div class="projects">
+<div class="project card reveal"><div><div class="tag">01 · AGENTIC AI</div><h3>Agentic AI Test Automation Platform</h3><p>Built an enterprise platform that converts ADO stories and business requirement documents into AI-generated acceptance criteria, test cases and automation scripts using multi-agent workflows.</p><p><b>Impact:</b> Reduced manual test design effort and improved testing consistency through AI-assisted generation.</p></div><div class="architecture">
+<div class="orchestrator">
+  <div class="orch-title">AI ORCHESTRATION LAYER</div>
+  <div class="flow">
+    <div class="box">ADO Board</div><div class="arrow">→</div>
+    <div class="box">Agent 1<br><small>Fetch Requirements</small></div><div class="arrow">→</div>
+    <div class="gate">BA<br>Gate Approval</div><div class="arrow">→</div>
+    <div class="box">Agent 2<br><small>Test Case Generation</small></div>
+  </div>
+  <div class="connector">↕</div>
+  <div class="flow">
+    <div class="box">Agent 4<br><small>Knowledge Base Context</small></div>
+    <div class="merge">⟷</div>
+    <div class="box">Agent 2<br><small>Context-Aware Generation</small></div>
+  </div>
+  <div class="flow">
+    <div class="arrow">↓</div><div class="gate">Test<br>Gate Approval</div><div class="arrow">↓</div>
+    <div class="box">Agent 3<br><small>Script Generation</small></div><div class="arrow">→</div>
+    <div class="gate">Engineer<br>Gate Approval</div>
+  </div>
+  <div class="orchestration-note">All agents, gates and knowledge services are coordinated through the orchestration layer.</div>
+</div>
+</div></div>
+<div class="project card reveal"><div><div class="tag">02 · MCP + BROWSER AI</div><h3>Agentic Browser Automation Framework</h3><p>Built AI-powered browser automation using Playwright and MCP, enabling agentic execution where LLM-generated instructions are dynamically translated into Playwright test scripts.</p><p><b>Pipeline:</b> Natural language → test case → dynamic locator mapping → execution → validation.</p></div><div class="architecture"><div class="flow"><div class="box">Natural Language</div><div class="arrow">→</div><div class="box">LLM</div><div class="arrow">→</div><div class="box">MCP</div><div class="arrow">→</div><div class="box">Playwright</div><div class="arrow">→</div><div class="box">Validate</div></div></div></div>
+<div class="project card reveal"><div><div class="tag">03 · VOICE + CONVERSATIONAL AI</div><h3>Customer Assist Voice Chatbot</h3><p>Developed real-time voice and text conversational AI with multi-agent query routing. The solution evolved from a FAQ chatbot supporting three brands to integration with the OneAI platform.</p><p>Implemented speech-to-text with Novasonic models and a PII/PHI masking pipeline using LangFuse traces to preserve privacy while maintaining conversational context.</p></div><div class="architecture"><div class="flow"><div class="box">Voice / Text</div><div class="arrow">→</div><div class="box">Speech-to-Text</div><div class="arrow">→</div><div class="box">Mask PII/PHI</div><div class="arrow">→</div><div class="box">Multi-Agent Routing</div><div class="arrow">→</div><div class="box">Secure Response</div></div></div></div>
+
+<div class="project card reveal"><div><div class="tag">04 · INTELLIGENT CUSTOMER ASSIST</div><h3>Customer Assist Intelligent Chatbot</h3><p>Designed an intelligent FAQ-focused customer assistant using a multi-agent architecture. A master orchestrator routes each customer query to the appropriate capability while coordinating domain-specific agents.</p><p>The system supports <b>Chitchat</b>, <b>RAG</b>, <b>Escalation</b>, and domain orchestration across <b>Admin</b>, <b>Troubleshooting</b>, and <b>Billing</b> agents. <b>Live tracing with LangFuse</b> provides visibility into agent execution and the end-to-end conversational flow.</p></div><div class="architecture"><div class="orchestrator"><div class="orch-title">MASTER ORCHESTRATOR</div><div class="flow"><div class="box">Customer Query</div><div class="arrow">→</div><div class="box">Master<br>Orchestrator</div></div><div class="connector">↓</div><div class="flow"><div class="box">Chitchat<br>Agent</div><div class="box">RAG<br>Agent</div><div class="box">Escalation<br>Agent</div></div><div class="connector">↓</div><div class="flow"><div class="box">Admin<br>Domain Agent</div><div class="box">Troubleshooting<br>Domain Agent</div><div class="box">Billing<br>Domain Agent</div></div><div class="orch-title" style="margin-top:16px;color:var(--a)">LIVE TRACING · LANGFUSE</div></div></div></div>
+
+<div class="project card reveal"><div><div class="tag">05 · KNOWLEDGE AI</div><h3>Enterprise Knowledge Retrieval</h3><p>Designed LLM-based enterprise knowledge retrieval solutions and prompt engineering pipelines to improve chatbot response quality across domains.</p><p><b>Reported impact:</b> Query accuracy improved by <b>35%</b>, with automated model monitoring and retraining workflows contributing to a <b>20%</b> reduction in downtime.</p></div><div class="architecture"><div class="flow"><div class="box">Enterprise Data</div><div class="arrow">→</div><div class="box">Retrieve</div><div class="arrow">→</div><div class="box">LLM</div><div class="arrow">→</div><div class="box">Grounded Answer</div><div class="arrow">→</div><div class="box">Monitor</div></div></div></div>
+<div class="project card reveal"><div><div class="tag">04 · KNOWLEDGE AI</div><h3>Enterprise Knowledge Retrieval</h3><p>Designed LLM-based enterprise knowledge retrieval solutions and prompt engineering pipelines to improve chatbot response quality across domains.</p><p><b>Reported impact:</b> Query accuracy improved by <b>35%</b>, with automated model monitoring and retraining workflows contributing to a <b>20%</b> reduction in downtime.</p></div><div class="architecture"><div class="flow"><div class="box">Enterprise Data</div><div class="arrow">→</div><div class="box">Retrieve</div><div class="arrow">→</div><div class="box">LLM</div><div class="arrow">→</div><div class="box">Grounded Answer</div><div class="arrow">→</div><div class="box">Monitor</div></div></div></div>
+</div></div></section>
+
+<section><div class="wrap"><div class="sectionhead reveal"><h2>How I Think</h2><p>My approach is engineering-first: understand the problem, design the right AI workflow, evaluate it, then integrate and deploy.</p></div><div class="think reveal"><div class="step"><b>01</b><span>Problem</span></div><div class="step"><b>02</b><span>Understand</span></div><div class="step"><b>03</b><span>Design</span></div><div class="step"><b>04</b><span>Orchestrate</span></div><div class="step"><b>05</b><span>Evaluate</span></div><div class="step"><b>06</b><span>Deploy</span></div></div></div></section>
+
+<section id="journey"><div class="wrap"><div class="sectionhead reveal"><h2>Career Journey</h2><p>From an Electrical & Electronics Engineering foundation to building production-oriented Generative AI systems.</p></div><div class="timeline reveal"><div class="event"><b>2021</b><h3>BE / BTech · Electrical & Electronics Engineering</h3><p>Anna University, Tamil Nadu.</p></div><div class="event"><b>2022 → Present</b><h3>Infosys · Generative AI Engineer</h3><p>Enterprise AI engineering across LLM applications, retrieval, agentic workflows, automation and conversational systems.</p></div><div class="event"><b>Today</b><h3>Building AI systems that can act</h3><p>Working across LLMs, LangChain, LangGraph, LangFuse, MCP, voice AI, APIs and cloud services.</p></div></div></div></section>
+
+<section><div class="wrap"><div class="metrics reveal"><div class="metric"><b>4.5+</b><span>Years of experience</span></div><div class="metric"><b>LLM</b><span>Enterprise AI systems</span></div><div class="metric"><b>35%</b><span>Reported query accuracy improvement</span></div><div class="metric"><b>20%</b><span>Reported downtime reduction</span></div></div></div></section>
+
+<section id="contact"><div class="wrap"><div class="contact reveal"><h2>Let's build something intelligent.</h2><p>Interested in Generative AI, agentic systems, conversational AI or AI automation? I'd be happy to connect.</p><p><a href="mailto:aswathykrishna.2799@gmail.com">aswathykrishna.2799@gmail.com</a></p><div class="buttons" style="justify-content:center"><a class="btn primary" href="mailto:aswathykrishna.2799@gmail.com">Contact Me</a><a class="btn" href="https://github.com/aswathyradhakrishnan27/ML" target="_blank">View GitHub ↗</a></div></div></div></section>
+</main><footer>© 2026 Aswathy R · Generative AI Engineer</footer>
+<script>
+const c=document.getElementById('net'),x=c.getContext('2d');let w,h,pts=[];
+function resize(){w=c.width=innerWidth;h=c.height=innerHeight;pts=Array.from({length:70},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25}))}
+function draw(){x.clearRect(0,0,w,h);for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;x.beginPath();x.arc(p.x,p.y,1.3,0,Math.PI*2);x.fillStyle='rgba(101,216,255,.45)';x.fill()}for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){let dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.hypot(dx,dy);if(d<130){x.beginPath();x.moveTo(pts[i].x,pts[i].y);x.lineTo(pts[j].x,pts[j].y);x.strokeStyle='rgba(101,216,255,'+(.11*(1-d/130))+')';x.stroke()}}requestAnimationFrame(draw)}
+addEventListener('resize',resize);resize();draw();const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+</script></body></html>
